@@ -50,7 +50,7 @@ const PROGETTI = [
     titolo: 'Packaging & brand identity',
     sommario: 'Sviluppo di packaging completo per linee prodotto retail, dalla struttura del dieline alla resa in stampa, mantenendo coerenza visiva su tutti i touchpoint: etichette, box, shopper, tag.',
     tag: ['Dieline & struttura pack', 'Gestione colore Pantone / CMYK', 'File esecutivi per la stampa', 'Linee guida di brand'],
-    immagini: [assets/progetti/packaging/]
+    immagini: []
   },
 
   {
@@ -91,7 +91,7 @@ const PROGETTI = [
     sommario: '[Sostituisci con una descrizione breve: cosa comprendeva il progetto Liberty — packaging, brand identity della linea, render di prodotto per il lancio, materiali per il punto vendita?]',
     tag: ['[tag 1]', '[tag 2]', '[tag 3]'],
     immagini: [
-      'assets/progetti/liberty/liberty-01.jpg',
+      'assets/progetti/packaging/liberty-01.jpg',
       'assets/progetti/liberty/liberty-02.jpg',
       'assets/progetti/liberty/liberty-03.jpg'
     ]
