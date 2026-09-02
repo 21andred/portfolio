@@ -26,19 +26,22 @@ const spy = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const id = entry.target.id;
+
         navItems.forEach((a) => {
           a.classList.toggle('active', a.dataset.nav === id);
         });
       }
     });
   },
-  { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
+  {
+    rootMargin: '-45% 0px -50% 0px',
+    threshold: 0
+  }
 );
 
 sections.forEach((section) => spy.observe(section));
 
 // ---------- Render dei progetti da progetti-dati.js ----------
-
 function initialiDiTitolo(titolo) {
   return titolo
     .split(/\s+/)
@@ -46,6 +49,19 @@ function initialiDiTitolo(titolo) {
     .slice(0, 2)
     .map((parola) => parola.charAt(0).toUpperCase())
     .join('');
+}
+
+function creaImmagineProgetto(src, progetto, indiceImmagine, classe) {
+  return `
+    <img
+      class="${classe} project-image"
+      src="${src}"
+      alt="${progetto.titolo} — immagine ${indiceImmagine + 1}"
+      data-project-id="${progetto.id}"
+      data-image-index="${indiceImmagine}"
+      onerror="gestisciImmagineMancante(this)"
+    >
+  `;
 }
 
 function creaVisual(progetto) {
@@ -63,7 +79,12 @@ function creaVisual(progetto) {
   if (immagini.length === 1) {
     return `
       <div class="case-visual case-visual-photo">
-        <img class="photo-single" src="${immagini[0]}" alt="${progetto.titolo}" onerror="gestisciImmagineMancante(this)">
+        ${creaImmagineProgetto(
+          immagini[0],
+          progetto,
+          0,
+          'photo-single'
+        )}
       </div>
     `;
   }
@@ -74,11 +95,21 @@ function creaVisual(progetto) {
   return `
     <div class="case-visual case-visual-photo">
       <div class="photo-grid">
-        <img class="photo-main" src="${principale}" alt="${progetto.titolo}" onerror="gestisciImmagineMancante(this)">
+        ${creaImmagineProgetto(
+          principale,
+          progetto,
+          0,
+          'photo-main'
+        )}
+
         ${secondarie
-          .map(
-            (src) =>
-              `<img class="photo-sub" src="${src}" alt="${progetto.titolo}" onerror="gestisciImmagineMancante(this)">`
+          .map((src, index) =>
+            creaImmagineProgetto(
+              src,
+              progetto,
+              index + 1,
+              'photo-sub'
+            )
           )
           .join('')}
       </div>
@@ -94,6 +125,7 @@ function gestisciImmagineMancante(img) {
   box.innerHTML = '<p>Immagine non trovata</p>';
   img.replaceWith(box);
 }
+
 window.gestisciImmagineMancante = gestisciImmagineMancante;
 
 function creaProgetto(progetto, indice) {
@@ -106,6 +138,7 @@ function creaProgetto(progetto, indice) {
   return `
     <article class="case${classeReverse}" id="case-${progetto.id}">
       ${creaVisual(progetto)}
+
       <div class="case-content">
         <span class="case-index">${numero}</span>
         <h3>${progetto.titolo}</h3>
@@ -118,11 +151,146 @@ function creaProgetto(progetto, indice) {
 
 function renderizzaProgetti() {
   const container = document.getElementById('progetti-lista');
-  if (!container || typeof PROGETTI === 'undefined') return;
 
-  container.innerHTML = PROGETTI.map((progetto, indice) =>
-    creaProgetto(progetto, indice)
-  ).join('');
+  if (!container || typeof PROGETTI === 'undefined') {
+    return;
+  }
+
+  container.innerHTML = PROGETTI
+    .map((progetto, indice) => creaProgetto(progetto, indice))
+    .join('');
 }
 
 renderizzaProgetti();
+
+// ---------- Lightbox / visualizzatore immagini ----------
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const lightboxCaption = document.getElementById('lightbox-caption');
+const lightboxClose = document.getElementById('lightbox-close');
+const lightboxPrev = document.getElementById('lightbox-prev');
+const lightboxNext = document.getElementById('lightbox-next');
+
+let immaginiLightbox = [];
+let indiceLightbox = 0;
+let titoloLightbox = '';
+
+function aggiornaLightbox() {
+  const src = immaginiLightbox[indiceLightbox];
+
+  if (!src) {
+    return;
+  }
+
+  lightboxImage.src = src;
+  lightboxImage.alt = `${titoloLightbox} — immagine ${indiceLightbox + 1}`;
+
+  lightboxCaption.textContent =
+    `${titoloLightbox} — ${indiceLightbox + 1} / ${immaginiLightbox.length}`;
+
+  const mostraFrecce = immaginiLightbox.length > 1;
+
+  lightboxPrev.hidden = !mostraFrecce;
+  lightboxNext.hidden = !mostraFrecce;
+}
+
+function apriLightbox(progetto, indiceIniziale) {
+  immaginiLightbox = progetto.immagini || [];
+  indiceLightbox = indiceIniziale;
+  titoloLightbox = progetto.titolo;
+
+  if (immaginiLightbox.length === 0) {
+    return;
+  }
+
+  aggiornaLightbox();
+
+  lightbox.classList.add('is-open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+
+  lightboxClose.focus();
+}
+
+function chiudiLightbox() {
+  lightbox.classList.remove('is-open');
+  lightbox.setAttribute('aria-hidden', 'true');
+
+  lightboxImage.src = '';
+  lightboxImage.alt = '';
+
+  document.body.style.overflow = '';
+}
+
+function vaiAImmaginePrecedente() {
+  if (immaginiLightbox.length < 2) {
+    return;
+  }
+
+  indiceLightbox =
+    (indiceLightbox - 1 + immaginiLightbox.length) % immaginiLightbox.length;
+
+  aggiornaLightbox();
+}
+
+function vaiAImmagineSuccessiva() {
+  if (immaginiLightbox.length < 2) {
+    return;
+  }
+
+  indiceLightbox =
+    (indiceLightbox + 1) % immaginiLightbox.length;
+
+  aggiornaLightbox();
+}
+
+// Apre il visualizzatore cliccando un'immagine di un progetto.
+document.addEventListener('click', (event) => {
+  const immagine = event.target.closest('.project-image');
+
+  if (!immagine) {
+    return;
+  }
+
+  const progetto = PROGETTI.find(
+    (item) => item.id === immagine.dataset.projectId
+  );
+
+  if (!progetto) {
+    return;
+  }
+
+  const indice = Number(immagine.dataset.imageIndex);
+
+  apriLightbox(progetto, indice);
+});
+
+lightboxClose.addEventListener('click', chiudiLightbox);
+lightboxPrev.addEventListener('click', vaiAImmaginePrecedente);
+lightboxNext.addEventListener('click', vaiAImmagineSuccessiva);
+
+// Chiude il visualizzatore se clicchi sullo sfondo scuro.
+lightbox.addEventListener('click', (event) => {
+  if (event.target === lightbox) {
+    chiudiLightbox();
+  }
+});
+
+// Controlli da tastiera.
+document.addEventListener('keydown', (event) => {
+  if (!lightbox.classList.contains('is-open')) {
+    return;
+  }
+
+  if (event.key === 'Escape') {
+    chiudiLightbox();
+  }
+
+  if (event.key === 'ArrowLeft') {
+    vaiAImmaginePrecedente();
+  }
+
+  if (event.key === 'ArrowRight') {
+    vaiAImmagineSuccessiva();
+  }
+});
