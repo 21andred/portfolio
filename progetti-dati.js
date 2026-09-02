@@ -91,7 +91,9 @@ const PROGETTI = [
     sommario: '[Sostituisci con una descrizione breve: cosa comprendeva il progetto Liberty — packaging, brand identity della linea, render di prodotto per il lancio, materiali per il punto vendita?]',
     tag: ['[tag 1]', '[tag 2]', '[tag 3]'],
     immagini: [
-      'assets/packaging/Liberty/liberty-01.jpg'
+      'assets/packaging/Liberty/liberty-01.jpg',
+      'assets/packaging/Liberty/liberty-02.jpg'
+      
     ]
   }
 
