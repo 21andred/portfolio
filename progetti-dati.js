@@ -75,8 +75,13 @@ const PROGETTI = [
       'Render 3D'
     ],
     immagini: [
-      'assets/packaging/Liberty/liberty-03.png',
-      'assets/packaging/Liberty/liberty-02.jpg'
+      'assets/packaging/Liberty/liberty (1).png',
+      'assets/packaging/Liberty/liberty (2).png',
+      'assets/packaging/Liberty/liberty (3).png',
+      'assets/packaging/Liberty/liberty (4).png',
+      'assets/packaging/Liberty/liberty (5).png',
+      'assets/packaging/Liberty/liberty (6).png',
+      'assets/packaging/Liberty/liberty (7).png'
     ]
   }
 
