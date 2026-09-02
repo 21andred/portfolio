@@ -164,6 +164,7 @@ function renderizzaProgetti() {
 renderizzaProgetti();
 
 // ---------- Lightbox / visualizzatore immagini ----------
+// ---------- Lightbox / visualizzatore immagini ----------
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.getElementById('lightbox-image');
 const lightboxCaption = document.getElementById('lightbox-caption');
@@ -176,56 +177,45 @@ let indiceLightbox = 0;
 let titoloLightbox = '';
 
 function aggiornaLightbox() {
-  const src = immaginiLightbox[indiceLightbox];
+  if (!immaginiLightbox.length) return;
 
-  if (!src) {
-    return;
-  }
+  const src = immaginiLightbox[indiceLightbox];
 
   lightboxImage.src = src;
   lightboxImage.alt = `${titoloLightbox} — immagine ${indiceLightbox + 1}`;
 
   lightboxCaption.textContent =
-    `${titoloLightbox} — ${indiceLightbox + 1} / ${immaginiLightbox.length}`;
+    `${indiceLightbox + 1} / ${immaginiLightbox.length}`;
 
-  const mostraFrecce = immaginiLightbox.length > 1;
-
-  lightboxPrev.hidden = !mostraFrecce;
-  lightboxNext.hidden = !mostraFrecce;
+  const haPiuImmagini = immaginiLightbox.length > 1;
+  lightboxPrev.hidden = !haPiuImmagini;
+  lightboxNext.hidden = !haPiuImmagini;
 }
 
-function apriLightbox(progetto, indiceIniziale) {
+function apriLightbox(progetto, indiceIniziale = 0) {
   immaginiLightbox = progetto.immagini || [];
   indiceLightbox = indiceIniziale;
-  titoloLightbox = progetto.titolo;
+  titoloLightbox = progetto.titolo || '';
 
-  if (immaginiLightbox.length === 0) {
-    return;
-  }
+  if (!immaginiLightbox.length) return;
 
   aggiornaLightbox();
 
   lightbox.classList.add('is-open');
   lightbox.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
-
-  lightboxClose.focus();
 }
 
 function chiudiLightbox() {
   lightbox.classList.remove('is-open');
   lightbox.setAttribute('aria-hidden', 'true');
-
   lightboxImage.src = '';
   lightboxImage.alt = '';
-
   document.body.style.overflow = '';
 }
 
-function vaiAImmaginePrecedente() {
-  if (immaginiLightbox.length < 2) {
-    return;
-  }
+function immaginePrecedente() {
+  if (immaginiLightbox.length < 2) return;
 
   indiceLightbox =
     (indiceLightbox - 1 + immaginiLightbox.length) % immaginiLightbox.length;
@@ -233,10 +223,8 @@ function vaiAImmaginePrecedente() {
   aggiornaLightbox();
 }
 
-function vaiAImmagineSuccessiva() {
-  if (immaginiLightbox.length < 2) {
-    return;
-  }
+function immagineSuccessiva() {
+  if (immaginiLightbox.length < 2) return;
 
   indiceLightbox =
     (indiceLightbox + 1) % immaginiLightbox.length;
@@ -244,53 +232,46 @@ function vaiAImmagineSuccessiva() {
   aggiornaLightbox();
 }
 
-// Apre il visualizzatore cliccando un'immagine di un progetto.
+/* Click sulle immagini del portfolio */
 document.addEventListener('click', (event) => {
   const immagine = event.target.closest('.project-image');
 
-  if (!immagine) {
-    return;
-  }
+  if (!immagine) return;
 
   const progetto = PROGETTI.find(
     (item) => item.id === immagine.dataset.projectId
   );
 
-  if (!progetto) {
-    return;
-  }
+  if (!progetto) return;
 
-  const indice = Number(immagine.dataset.imageIndex);
-
-  apriLightbox(progetto, indice);
+  apriLightbox(progetto, Number(immagine.dataset.imageIndex));
 });
 
+/* Pulsanti */
 lightboxClose.addEventListener('click', chiudiLightbox);
-lightboxPrev.addEventListener('click', vaiAImmaginePrecedente);
-lightboxNext.addEventListener('click', vaiAImmagineSuccessiva);
+lightboxPrev.addEventListener('click', immaginePrecedente);
+lightboxNext.addEventListener('click', immagineSuccessiva);
 
-// Chiude il visualizzatore se clicchi sullo sfondo scuro.
+/* Click solo sullo sfondo scuro: non chiude se clicchi foto o pulsanti */
 lightbox.addEventListener('click', (event) => {
   if (event.target === lightbox) {
     chiudiLightbox();
   }
 });
 
-// Controlli da tastiera.
+/* Tastiera */
 document.addEventListener('keydown', (event) => {
-  if (!lightbox.classList.contains('is-open')) {
-    return;
-  }
+  if (!lightbox.classList.contains('is-open')) return;
 
   if (event.key === 'Escape') {
     chiudiLightbox();
   }
 
   if (event.key === 'ArrowLeft') {
-    vaiAImmaginePrecedente();
+    immaginePrecedente();
   }
 
   if (event.key === 'ArrowRight') {
-    vaiAImmagineSuccessiva();
+    immagineSuccessiva();
   }
 });
