@@ -55,12 +55,11 @@ const PROGETTI = [
   {
     id: 'render',
     titolo: 'Rendering grafici',
-    sommario: 'Visualizzazioni 2D/3D di prodotto per presentazioni interne e approvazioni fornitori, utili quando il campione fisico non c’è ancora ma la decisione va presa comunque.',
+    sommario: 'Progetto di packaging e comunicazione visiva per le linee di piatti Fuoco-Mare-Sabbia.',
     tag: [
-      'Adobe Dimension',
-      'Mockup di prodotto',
-      'Visualizzazioni 2D/3D',
-      'Materiali per approvazione'
+       'Packaging',
+      'Brand identity',
+      'Render 3D'
     ],
      immagini: [
   'assets/packaging/Sabia Mare Fuoco/Fuoco-1.jpg',
