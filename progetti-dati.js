@@ -74,15 +74,15 @@ const PROGETTI = [
       'Brand identity',
       'Render 3D'
     ],
-    immagini: [
-      'assets/packaging/Liberty/liberty (1).png',
-      'assets/packaging/Liberty/liberty (2).png',
-      'assets/packaging/Liberty/liberty (3).png',
-      'assets/packaging/Liberty/liberty (4).png',
-      'assets/packaging/Liberty/liberty (5).png',
-      'assets/packaging/Liberty/liberty (6).png',
-      'assets/packaging/Liberty/liberty (7).png'
-    ]
+ immagini: [
+    'assets/packaging/Liberty/liberty%20(1).png',
+    'assets/packaging/Liberty/liberty%20(2).png',
+    'assets/packaging/Liberty/liberty%20(3).png',
+    'assets/packaging/Liberty/liberty%20(4).png',
+    'assets/packaging/Liberty/liberty%20(5).png',
+    'assets/packaging/Liberty/liberty%20(6).png',
+    'assets/packaging/Liberty/liberty%20(7).png'
+  ]
   }
 
 ];
