@@ -95,6 +95,16 @@ const PROGETTI = [
       'assets/packaging/Liberty/liberty-02.jpg'
       
     ]
+
+  {
+  id: 'liberty',
+  titolo: 'Linea elettrodomestici Liberty',
+  sommario: 'Progetto di packaging e comunicazione visiva per la linea di elettrodomestici Liberty.',
+  tag: ['packaging', 'brand identity', 'render 3D'],
+  immagini: [
+    'assets/packaging/Liberty/liberty-03.png'
+  ]
+}
   }
 
   // Il prossimo progetto va copiato qui sopra, separato da una virgola.
