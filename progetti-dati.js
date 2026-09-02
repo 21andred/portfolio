@@ -50,7 +50,7 @@ const PROGETTI = [
     titolo: 'Packaging & brand identity',
     sommario: 'Sviluppo di packaging completo per linee prodotto retail, dalla struttura del dieline alla resa in stampa, mantenendo coerenza visiva su tutti i touchpoint: etichette, box, shopper, tag.',
     tag: ['Dieline & struttura pack', 'Gestione colore Pantone / CMYK', 'File esecutivi per la stampa', 'Linee guida di brand'],
-    immagini: []
+    immagini: [assets/progetti/liberty/]
   },
 
   {
