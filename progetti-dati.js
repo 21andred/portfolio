@@ -62,7 +62,11 @@ const PROGETTI = [
       'Visualizzazioni 2D/3D',
       'Materiali per approvazione'
     ],
-    immagini: []
+     immagini: [
+  'assets/packaging/Sabia Mare Fuoco/Fuoco-1.jpg',
+  'assets/packaging/Sabia Mare Fuoco/Mare-1.jpg',
+  'assets/packaging/Sabia Mare Fuoco/Sabbia-1.jpg'
+]
   },
 
   {
