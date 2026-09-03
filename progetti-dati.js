@@ -58,7 +58,9 @@ const PROGETTI = [
       'File esecutivi per la stampa',
       'Linee guida di brand'
     ],
-    immagini: []
+    immagini: [
+       'assets/packaging/Macchinetta caffè/macchinetta caffe-01.png'
+    ]
   },
 
   {
