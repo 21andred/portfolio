@@ -59,7 +59,9 @@ const PROGETTI = [
       'Linee guida di brand'
     ],
     immagini: [
-       'assets/packaging/Macchinetta caffè/macchinetta caffe-01.png'
+       'assets/packaging/Macchinetta caffè/macchinetta caffe-01.png',
+       'assets/packaging/Macchinetta caffè/macchinetta caffe-02.png',
+       'assets/packaging/Macchinetta caffè/macchinetta caffe-03.png'
     ]
   },
 
