@@ -76,7 +76,12 @@ const PROGETTI = [
       'Prestampa e controllo qualità',
       'Adattamento multi-formato'
     ],
-    immagini: []
+    immagini: [
+       'assets/packaging/Decanter/decanter-01.png',
+       'assets/packaging/Decanter/decanter-02.png',
+       'assets/packaging/Decanter/decanter-03.png'
+              
+              ]
   },
 
   {
