@@ -95,7 +95,10 @@ const PROGETTI = [
       'Coerenza fisico / digitale',
       'Specifiche fornitori'
     ],
-    immagini: []
+    immagini: [
+       'assets/packaging/triplycopper/triplycopper-01.png',
+       'assets/packaging/triplycopper/triplycopper-02.png'              
+              ]
   },
 
   {
