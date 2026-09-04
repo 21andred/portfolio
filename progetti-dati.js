@@ -177,7 +177,12 @@ const PROGETTI = [
     titolo: 'Gioia Pura',
     sommario: '[Sostituisci con una descrizione breve: cosa comprendeva il lavoro per Gioia Pura — sito web, identità di marca, materiali stampati, social?]',
     tag: ['[tag 1]', '[tag 2]', '[tag 3]'],
-    immagini: []
+    immagini: [
+       'assets/vari/gioiapura/gioiapura_nl-01.gif',
+       'assets/vari/gioiapura/gioiapura_b_03.jpg',
+       'assets/vari/gioiapura/gioiapura_b_02.jpg',
+       'assets/vari/gioiapura/gioiapura_adv-04.jpg'
+     ]
   },
 
   {
