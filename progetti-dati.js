@@ -166,7 +166,7 @@ const PROGETTI = [
     tag: ['[tag 1]', '[tag 2]', '[tag 3]'],
     immagini: [
        'assets/vari/homs/banner-01.jpg',
-       'assets/vari/homs/banner-02.jpg',
+       'assets/vari/homs/banner-02.png',
        'assets/vari/homs/volantino-01.jpg'
     ]
   },
