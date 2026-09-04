@@ -79,10 +79,7 @@ const PROGETTI = [
     immagini: [
        'assets/packaging/Decanter/decanter-01.png',
        'assets/packaging/Decanter/decanter-02.png',
-       'assets/packaging/Decanter/decanter-03.png',
-       'assets/packaging/Decanter/decanter-04.jpg',
-       'assets/packaging/Decanter/decanter-05.jpg',
-       'assets/packaging/Decanter/decanter-06.jpg'
+       'assets/packaging/Decanter/decanter-03.png'
               
               ]
   },
@@ -100,7 +97,11 @@ const PROGETTI = [
     ],
     immagini: [
        'assets/packaging/triplycopper/triplycopper-01.png',
-       'assets/packaging/triplycopper/triplycopper-02.png'              
+       'assets/packaging/triplycopper/triplycopper-02.png',
+       'assets/packaging/triplycopper/triplycopper-03.jpg',
+       'assets/packaging/triplycopper/triplycopper-05.jpg',
+       'assets/packaging/triplycopper/triplycopper-05.jpg',
+       'assets/packaging/triplycopper/triplycopper-06.jpg'
               ]
   },
 
