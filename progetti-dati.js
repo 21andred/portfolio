@@ -79,7 +79,10 @@ const PROGETTI = [
     immagini: [
        'assets/packaging/Decanter/decanter-01.png',
        'assets/packaging/Decanter/decanter-02.png',
-       'assets/packaging/Decanter/decanter-03.png'
+       'assets/packaging/Decanter/decanter-03.png',
+       'assets/packaging/Decanter/decanter-04.jpg',
+       'assets/packaging/Decanter/decanter-05.jpg',
+       'assets/packaging/Decanter/decanter-06.jpg'
               
               ]
   },
