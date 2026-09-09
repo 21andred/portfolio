@@ -116,7 +116,11 @@ const PROGETTI = [
       'Asset per social',
       'Landing page'
     ],
-    immagini: []
+    immagini: [
+      'assets/packaging/lampadeTER/lampadeter-01.png',
+      'assets/packaging/lampadeTER/lampadeter-02.png',
+      'assets/packaging/lampadeTER/lampadeter-03.png'      
+    ]
   },
 
   {
