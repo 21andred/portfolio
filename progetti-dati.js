@@ -159,7 +159,7 @@ const PROGETTI = [
       'assets/packaging/Liberty/liberty-06.png',
       'assets/packaging/Liberty/liberty-01.png'
     ]
-  }
+  },
    
    {
     id: 'bottiglie',
@@ -180,7 +180,7 @@ const PROGETTI = [
       'assets/packaging/BottiglieWOW/bottigliewow-06.jpg',
       'assets/packaging/BottiglieWOW/bottigliewow-07.jpg'
     ]
-  }
+  },
 
   /* ---------- Altri lavori ---------- */
 
