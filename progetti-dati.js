@@ -243,7 +243,7 @@ const PROGETTI = [
        'assets/vari/locussolus/locussolus-06.jpg',
        'assets/vari/locussolus/locussolus-07.jpg',
        'assets/vari/locussolus/locussolus-08.jpg'
-    ]
+    ],
   }
 
   // Il prossimo progetto va copiato qui sopra, separato da una virgola.
