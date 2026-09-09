@@ -192,7 +192,16 @@ const PROGETTI = [
     titolo: 'Progetti universitari',
     sommario: '[Sostituisci con una descrizione breve: quali progetti del percorso al Politecnico vuoi mostrare?]',
     tag: ['[tag 1]', '[tag 2]', '[tag 3]'],
-    immagini: []
+    immagini: [
+       'assets/vari/locussolus/locussolus-01.jpg',
+       'assets/vari/locussolus/locussolus-02.jpg',
+       'assets/vari/locussolus/locussolus-03.jpg',
+       'assets/vari/locussolus/locussolus-04.jpg',
+       'assets/vari/locussolus/locussolus-05.jpg',
+       'assets/vari/locussolus/locussolus-06.jpg',
+       'assets/vari/locussolus/locussolus-07.jpg',
+       'assets/vari/locussolus/locussolus-08.jpg'
+    ]
   }
 
   // Il prossimo progetto va copiato qui sopra, separato da una virgola.
