@@ -172,13 +172,13 @@ const PROGETTI = [
       'Render 3D'
     ],
     immagini: [
-      'assets/packaging/Liberty/liberty-07.png',
-      'assets/packaging/Liberty/liberty-02.png',
-      'assets/packaging/Liberty/liberty-03.png',
-      'assets/packaging/Liberty/liberty-04.png',
-      'assets/packaging/Liberty/liberty-05.png',
-      'assets/packaging/Liberty/liberty-06.png',
-      'assets/packaging/Liberty/liberty-01.png'
+      'assets/packaging/BottiglieWOW/bottigliewow-01.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-02.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-03.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-04.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-05.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-06.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-07.jpg'
     ]
   },
 
