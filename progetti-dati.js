@@ -99,7 +99,7 @@ const PROGETTI = [
        'assets/packaging/triplycopper/triplycopper-01.png',
        'assets/packaging/triplycopper/triplycopper-02.png',
        'assets/packaging/triplycopper/triplycopper-03.jpg',
-       'assets/packaging/triplycopper/triplycopper-05.jpg',
+       'assets/packaging/triplycopper/triplycopper-04.jpg',
        'assets/packaging/triplycopper/triplycopper-05.jpg',
        'assets/packaging/triplycopper/triplycopper-06.jpg'
               ]
@@ -197,7 +197,7 @@ const PROGETTI = [
       'assets/packaging/FriggitriceBR/friggitricebr-02.jpg',
       'assets/packaging/FriggitriceBR/friggitricebr-03.jpg'
     ],
-  }
+  },
 
   /* ---------- Altri lavori ---------- */
 
