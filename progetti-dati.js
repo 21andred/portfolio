@@ -179,8 +179,8 @@ const PROGETTI = [
       'assets/packaging/BottiglieWOW/bottigliewow-05.jpg',
       'assets/packaging/BottiglieWOW/bottigliewow-06.jpg',
       'assets/packaging/BottiglieWOW/bottigliewow-07.jpg'
-    ]
-  },
+    ],
+  }
 
   /* ---------- Altri lavori ---------- */
 
