@@ -199,6 +199,34 @@ const PROGETTI = [
     ],
   },
 
+   
+    {
+    id: 'iovino',
+    categoria: 'packaging-design',
+    titolo: 'Linea packaging "IoVino"',
+    sommario: 'Progetto di packaging e comunicazione visiva per la linea di elettrodomestici Liberty.',
+    tag: [
+      'Packaging',
+      'Brand identity',
+      'Render 3D'
+    ],
+    immagini: [
+      'assets/packaging/IoVino/iovino-01.jpg',
+      'assets/packaging/IoVino/iovino-02.jpg',
+      'assets/packaging/IoVino/iovino-03.jpg',
+      'assets/packaging/IoVino/iovino-04.jpg',
+      'assets/packaging/IoVino/iovino-05.jpg',
+      'assets/packaging/IoVino/iovino-06.jpg',
+      'assets/packaging/IoVino/iovino-07.jpg',
+      'assets/packaging/IoVino/iovino-08.jpg',
+      'assets/packaging/IoVino/iovino-09.jpg',
+       'assets/packaging/IoVino/iovino-10.jpg',
+       'assets/packaging/IoVino/iovino-11.jpg',
+       'assets/packaging/IoVino/iovino-12.jpg',
+       'assets/packaging/IoVino/iovino-13.jpg'
+    ],
+  },
+
   /* ---------- Altri lavori ---------- */
 
   {
