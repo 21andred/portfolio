@@ -183,9 +183,9 @@ const PROGETTI = [
   },
    
   {
-    id: 'bottiglie',
+    id: 'friggitrice',
     categoria: 'packaging-design',
-    titolo: 'Bottiglie Termiche linea "WOW"',
+    titolo: 'Friggitrice "Benedetta Rossi"',
     sommario: 'Progetto di packaging e comunicazione visiva per la linea di elettrodomestici Liberty.',
     tag: [
       'Packaging',
@@ -193,13 +193,9 @@ const PROGETTI = [
       'Render 3D'
     ],
     immagini: [
-      'assets/packaging/BottiglieWOW/bottigliewow-01.jpg',
-      'assets/packaging/BottiglieWOW/bottigliewow-02.jpg',
-      'assets/packaging/BottiglieWOW/bottigliewow-03.jpg',
-      'assets/packaging/BottiglieWOW/bottigliewow-04.jpg',
-      'assets/packaging/BottiglieWOW/bottigliewow-05.jpg',
-      'assets/packaging/BottiglieWOW/bottigliewow-06.jpg',
-      'assets/packaging/BottiglieWOW/bottigliewow-07.jpg'
+      'assets/packaging/FriggitriceBR/friggitricebr-01.jpg',
+      'assets/packaging/FriggitriceBR/friggitricebr-02.jpg',
+      'assets/packaging/FriggitriceBR/friggitricebr-03.jpg'
     ],
   }
 
