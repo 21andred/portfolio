@@ -180,6 +180,27 @@ const PROGETTI = [
       'assets/packaging/BottiglieWOW/bottigliewow-06.jpg',
       'assets/packaging/BottiglieWOW/bottigliewow-07.jpg'
     ],
+  },
+   
+  {
+    id: 'bottiglie',
+    categoria: 'packaging-design',
+    titolo: 'Bottiglie Termiche linea "WOW"',
+    sommario: 'Progetto di packaging e comunicazione visiva per la linea di elettrodomestici Liberty.',
+    tag: [
+      'Packaging',
+      'Brand identity',
+      'Render 3D'
+    ],
+    immagini: [
+      'assets/packaging/BottiglieWOW/bottigliewow-01.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-02.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-03.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-04.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-05.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-06.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-07.jpg'
+    ],
   }
 
   /* ---------- Altri lavori ---------- */
