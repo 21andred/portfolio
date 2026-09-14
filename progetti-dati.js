@@ -237,9 +237,8 @@ const PROGETTI = [
       'Render 3D'
     ],
     immagini: [
-      'assets/packaging/FriggitriceBR/friggitricebr-01.jpg',
-      'assets/packaging/FriggitriceBR/friggitricebr-02.jpg',
-      'assets/packaging/FriggitriceBR/friggitricebr-03.jpg'
+      'assets/packaging/BlackDiamond/blackdiamond-01.jpg',
+      'assets/packaging/BlackDiamond/blackdiamond-02.jpg'
     ],
   },
 
