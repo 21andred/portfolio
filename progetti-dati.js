@@ -229,7 +229,7 @@ const PROGETTI = [
      {
     id: 'blackdiamond',
     categoria: 'packaging-design',
-    titolo: 'Linea Black Diamond"',
+    titolo: 'Linea Black Diamond',
     sommario: 'Progetto di packaging e comunicazione visiva per la linea di elettrodomestici Liberty.',
     tag: [
       'Packaging',
@@ -241,7 +241,24 @@ const PROGETTI = [
       'assets/packaging/BlackDiamond/blackdiamond-02.jpg'
     ],
   },
-
+ {
+    id: 'cookingtherapy',
+    categoria: 'packaging-design',
+    titolo: 'Linea Cooking Therapy',
+    sommario: 'Progetto di packaging e comunicazione visiva per la linea di elettrodomestici Liberty.',
+    tag: [
+      'Packaging',
+      'Brand identity',
+      'Render 3D'
+    ],
+    immagini: [
+      'assets/packaging/CookingTherapy/cookingtherapy-01.jpg',
+      'assets/packaging/CookingTherapy/cookingtherapy-02.jpg',
+      'assets/packaging/CookingTherapy/cookingtherapy-03.jpg',
+      'assets/packaging/CookingTherapy/cookingtherapy-04.jpg'
+    ],
+  },
+   
   /* ---------- Altri lavori ---------- */
 
   {
