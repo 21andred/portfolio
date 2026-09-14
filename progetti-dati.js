@@ -226,6 +226,22 @@ const PROGETTI = [
        'assets/packaging/IoVino/iovino-13.jpg'
     ],
   },
+     {
+    id: 'blackdiamond',
+    categoria: 'packaging-design',
+    titolo: 'Linea Black Diamond"',
+    sommario: 'Progetto di packaging e comunicazione visiva per la linea di elettrodomestici Liberty.',
+    tag: [
+      'Packaging',
+      'Brand identity',
+      'Render 3D'
+    ],
+    immagini: [
+      'assets/packaging/FriggitriceBR/friggitricebr-01.jpg',
+      'assets/packaging/FriggitriceBR/friggitricebr-02.jpg',
+      'assets/packaging/FriggitriceBR/friggitricebr-03.jpg'
+    ],
+  },
 
   /* ---------- Altri lavori ---------- */
 
