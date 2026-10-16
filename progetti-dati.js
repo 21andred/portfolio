@@ -269,6 +269,20 @@ const PROGETTI = [
       'assets/packaging/Rhapsody/rhapsody-04.png'
     ],
   },
+     {
+    id: 'triply2.0',
+    categoria: 'packaging-design',
+    sommario: 'Progetto di packaging e comunicazione visiva per la linea cottur "Tri Ply 2.0".',
+    tag: [
+      'Packaging',
+      'Brand identity',
+      'Render 3D'
+    ],
+    immagini: [
+      'assets/packaging/Tri Ply 2.0/triply2-01.png',
+      'assets/packaging/Tri Ply 2.0/triply2-02.png'
+    ],
+  },
    
   /* ---------- Altri lavori ---------- */
 
