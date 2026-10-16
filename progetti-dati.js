@@ -253,6 +253,22 @@ const PROGETTI = [
       'assets/packaging/CookingTherapy/cookingtherapy-04.jpg'
     ],
   },
+   {
+    id: 'rhapsody',
+    categoria: 'packaging-design',
+    sommario: 'Progetto di packaging e comunicazione visiva per la linea cottur "Rhapsody".',
+    tag: [
+      'Packaging',
+      'Brand identity',
+      'Render 3D'
+    ],
+    immagini: [
+      'assets/packaging/Rhapsody/rhapsody-01.png',
+      'assets/packaging/Rhapsody/rhapsody-02.png',
+      'assets/packaging/Rhapsody/rhapsody-03.png',
+      'assets/packaging/Rhapsody/rhapsody-04.png'
+    ],
+  },
    
   /* ---------- Altri lavori ---------- */
 
