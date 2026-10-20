@@ -355,3 +355,100 @@ document.addEventListener('keydown', (event) => {
     impostaIndice(progettoLightboxAttuale, statoImmagini[progettoLightboxAttuale] + 1);
   }
 });
+
+// =========================================================
+// SCROLL PROGETTI: un movimento della rotella = un progetto
+// Solo desktop con mouse. Mobile e touchpad mantengono
+// lo scorrimento naturale.
+// =========================================================
+
+(() => {
+  const desktop = window.matchMedia(
+    '(min-width: 861px) and (pointer: fine)'
+  );
+
+  const durataBlocco = 850;
+  let bloccatoFino = 0;
+  let sommaDelta = 0;
+  let ultimoEvento = 0;
+  let sbloccoTimer;
+
+  function progettoAlCentro() {
+    const elementi = [
+      ...document.querySelectorAll('#progetti-lista > .progetto')
+    ];
+
+    const centro = 68 + (window.innerHeight - 68) / 2;
+
+    return elementi.findIndex((el) => {
+      const r = el.getBoundingClientRect();
+      return r.top <= centro && r.bottom >= centro;
+    });
+  }
+
+  function gestioneRotella(event) {
+    if (!desktop.matches || event.ctrlKey || event.metaKey) return;
+
+    if (document.querySelector('.lightbox.is-open')) return;
+
+    if (
+      event.target.closest(
+        'textarea, select, input, [contenteditable="true"]'
+      )
+    ) return;
+
+    const elementi = [
+      ...document.querySelectorAll('#progetti-lista > .progetto')
+    ];
+
+    if (!elementi.length) return;
+
+    const indice = progettoAlCentro();
+    if (indice === -1) return;
+
+    const ora = performance.now();
+
+    if (ora - ultimoEvento > 180) {
+      sommaDelta = 0;
+    }
+
+    ultimoEvento = ora;
+
+    const direzione = Math.sign(event.deltaY);
+    if (!direzione) return;
+
+    const prossimo = indice + direzione;
+
+    if (prossimo < 0 || prossimo >= elementi.length) return;
+
+    // Evita di saltare piu progetti durante l'animazione
+    event.preventDefault();
+
+    if (ora < bloccatoFino) return;
+
+    sommaDelta += event.deltaY;
+
+    if (Math.abs(sommaDelta) < 35) return;
+
+    sommaDelta = 0;
+    bloccatoFino = ora + durataBlocco;
+
+    elementi[prossimo].scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+    clearTimeout(sbloccoTimer);
+
+    sbloccoTimer = setTimeout(() => {
+      sommaDelta = 0;
+    }, durataBlocco);
+  }
+
+  window.addEventListener(
+    'wheel',
+    gestioneRotella,
+    { passive: false }
+  );
+})();
+
