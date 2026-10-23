@@ -50,7 +50,9 @@ const PROGETTI = [
     tag: ['Packaging', 'Alta qualità', 'Tecnologia a vista'],
     immagini: [
       'assets/packaging/Tri Ply 2.0/triply2-01.png',
-      'assets/packaging/Tri Ply 2.0/triply2-02.png'
+      'assets/packaging/Tri Ply 2.0/triply2-02.png',
+      'assets/packaging/Tri Ply 2.0/triply2-03.png',
+      'assets/packaging/Tri Ply 2.0/triply2-04.png'
     ]
   },
 
