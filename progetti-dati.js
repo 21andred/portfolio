@@ -39,86 +39,22 @@
 const PROGETTI = [
 
   /* ---------- Packaging Design ---------- */
-
-  {
-    id: 'macchinetta-caffe',
+   
+ {
+    id: 'triply-2',
     categoria: 'packaging-design',
-    titolo: 'Macchina da caffè a cialde',
+    titolo: 'Tri-Ply 2.0',
     cliente: 'Kasanova',
-    colore: '#3B5BDB',
-    sommario: 'Packaging per una macchina da caffè a cialde, costruito su un linguaggio grafico pulito e moderno che lascia tutto lo spazio al prodotto.',
-    tag: ['Packaging', 'Stile pulito e moderno', 'Caffè a cialde'],
+    colore: '#1F5F8B',
+    sommario: 'Una linea di alta qualità in cui il packaging mostra la tecnologia nascosta dietro al prodotto e i diversi usi dei vari pezzi.',
+    tag: ['Packaging', 'Alta qualità', 'Tecnologia a vista'],
     immagini: [
-      'assets/packaging/Macchinetta caffè/macchinetta caffe-01.png',
-      'assets/packaging/Macchinetta caffè/macchinetta caffe-02.png',
-      'assets/packaging/Macchinetta caffè/macchinetta caffe-03.png'
+      'assets/packaging/Tri Ply 2.0/triply2-01.png',
+      'assets/packaging/Tri Ply 2.0/triply2-02.png'
     ]
   },
 
-  {
-    id: 'decanter',
-    categoria: 'packaging-design',
-    titolo: 'Decanter',
-    cliente: 'Kasanova',
-    colore: '#8E1B3A',
-    sommario: 'Un packaging pensato per trasmettere eleganza e finezza. Tutta la confezione riprende i toni del vino rosso, per evocare il mondo del vino fin dal primo sguardo.',
-    tag: ['Packaging', 'Eleganza', 'Toni del vino rosso'],
-    immagini: [
-      'assets/packaging/Decanter/decanter-01.png',
-      'assets/packaging/Decanter/decanter-02.png',
-      'assets/packaging/Decanter/decanter-03.png'
-    ]
-  },
-
-  {
-    id: 'copper-triply',
-    categoria: 'packaging-design',
-    titolo: 'Copper Triply',
-    cliente: 'Kasanova',
-    colore: '#B8673A',
-    sommario: 'Variante in rame della batteria Triply. Il packaging valorizza le finiture in rame e la modernità della linea, raccontando la complessità di un prodotto lontano da una classica padella.',
-    tag: ['Packaging', 'Finiture in rame', 'Linea Triply'],
-    immagini: [
-      'assets/packaging/triplycopper/triplycopper-01.png',
-      'assets/packaging/triplycopper/triplycopper-02.png',
-      'assets/packaging/triplycopper/triplycopper-03.jpg',
-      'assets/packaging/triplycopper/triplycopper-04.jpg',
-      'assets/packaging/triplycopper/triplycopper-05.jpg',
-      'assets/packaging/triplycopper/triplycopper-06.jpg'
-    ]
-  },
-
-  {
-    id: 'lampade-pianeti',
-    categoria: 'packaging-design',
-    titolo: 'Lampade Pianeti',
-    cliente: 'Kasanova',
-    colore: '#7C4DFF',
-    sommario: 'Una linea di lampade dedicata ai pianeti, con un look divertente e fumettoso. Il packaging porta lo stesso spirito: colorato, giocoso, immediato.',
-    tag: ['Packaging', 'Stile fumettoso', 'Colore'],
-    immagini: [
-      'assets/packaging/lampadeTER/lampadeter-01.png',
-      'assets/packaging/lampadeTER/lampadeter-02.png',
-      'assets/packaging/lampadeTER/lampadeter-03.png'
-    ]
-  },
-
-  {
-    id: 'nuance',
-    categoria: 'packaging-design',
-    titolo: 'Piatti Nuance',
-    cliente: 'Kasanova',
-    colore: '#1E9AA8',
-    sommario: 'Tre linee di piatti (Fuoco, Mare e Sabbia) che rimandano chiaramente agli elementi naturali, nei colori del prodotto come nel packaging.',
-    tag: ['Packaging', 'Ispirazione naturale', 'Fuoco, Mare, Sabbia'],
-    immagini: [
-      'assets/packaging/Sabia Mare Fuoco/Fuoco-1.jpg',
-      'assets/packaging/Sabia Mare Fuoco/Mare-1.jpg',
-      'assets/packaging/Sabia Mare Fuoco/Sabbia-1.jpg'
-    ]
-  },
-
-  {
+     {
     id: 'liberty',
     categoria: 'packaging-design',
     titolo: 'Liberty',
@@ -137,25 +73,39 @@ const PROGETTI = [
     ]
   },
 
-  {
-    id: 'bottiglie-termiche',
+     {
+    id: 'copper-triply',
     categoria: 'packaging-design',
-    titolo: 'Bottiglie termiche WOW',
+    titolo: 'Copper Triply',
     cliente: 'Kasanova',
-    colore: '#FF4F8B',
-    sommario: 'Progettazione di prodotto e packaging per una linea di bottiglie termiche dallo stile comic, ricca di colore. Prodotto e confezione parlano la stessa lingua, vivace e fumettosa.',
-    tag: ['Packaging', 'Design di prodotto', 'Stile comic'],
+    colore: '#B8673A',
+    sommario: 'Variante in rame della batteria Triply. Il packaging valorizza le finiture in rame e la modernità della linea, raccontando la complessità di un prodotto lontano da una classica padella.',
+    tag: ['Packaging', 'Finiture in rame', 'Linea Triply'],
     immagini: [
-      'assets/packaging/BottiglieWOW/bottigliewow-01.jpg',
-      'assets/packaging/BottiglieWOW/bottigliewow-02.jpg',
-      'assets/packaging/BottiglieWOW/bottigliewow-03.jpg',
-      'assets/packaging/BottiglieWOW/bottigliewow-04.jpg',
-      'assets/packaging/BottiglieWOW/bottigliewow-05.jpg',
-      'assets/packaging/BottiglieWOW/bottigliewow-06.jpg',
-      'assets/packaging/BottiglieWOW/bottigliewow-07.jpg'
+      'assets/packaging/triplycopper/triplycopper-01.png',
+      'assets/packaging/triplycopper/triplycopper-02.png',
+      'assets/packaging/triplycopper/triplycopper-03.jpg',
+      'assets/packaging/triplycopper/triplycopper-04.jpg',
+      'assets/packaging/triplycopper/triplycopper-05.jpg',
+      'assets/packaging/triplycopper/triplycopper-06.jpg'
     ]
   },
 
+     {
+    id: 'nuance',
+    categoria: 'packaging-design',
+    titolo: 'Piatti Nuance',
+    cliente: 'Kasanova',
+    colore: '#1E9AA8',
+    sommario: 'Tre linee di piatti (Fuoco, Mare e Sabbia) che rimandano chiaramente agli elementi naturali, nei colori del prodotto come nel packaging.',
+    tag: ['Packaging', 'Ispirazione naturale', 'Fuoco, Mare, Sabbia'],
+    immagini: [
+      'assets/packaging/Sabia Mare Fuoco/Fuoco-1.jpg',
+      'assets/packaging/Sabia Mare Fuoco/Mare-1.jpg',
+      'assets/packaging/Sabia Mare Fuoco/Sabbia-1.jpg'
+    ]
+  },
+   
   {
     id: 'friggitrice',
     categoria: 'packaging-design',
@@ -199,6 +149,90 @@ const PROGETTI = [
   },
 
   {
+    id: 'rhapsody',
+    categoria: 'packaging-design',
+    titolo: 'Rhapsody',
+    cliente: 'Kasanova',
+    colore: '#B8943A',
+    sommario: 'Prodotti matt opachi e oro, molto caratteristici. Il packaging è volutamente plain, per dare il massimo risalto al colore del prodotto.',
+    tag: ['Packaging', 'Matt e oro', 'Pack plain'],
+    immagini: [
+      'assets/packaging/Rhapsody/rhapsody-01.png',
+      'assets/packaging/Rhapsody/rhapsody-02.png',
+      'assets/packaging/Rhapsody/rhapsody-03.png',
+      'assets/packaging/Rhapsody/rhapsody-04.png'
+    ]
+  },
+
+  {
+    id: 'bottiglie-termiche',
+    categoria: 'packaging-design',
+    titolo: 'Bottiglie termiche WOW',
+    cliente: 'Kasanova',
+    colore: '#FF4F8B',
+    sommario: 'Progettazione di prodotto e packaging per una linea di bottiglie termiche dallo stile comic, ricca di colore. Prodotto e confezione parlano la stessa lingua, vivace e fumettosa.',
+    tag: ['Packaging', 'Design di prodotto', 'Stile comic'],
+    immagini: [
+      'assets/packaging/BottiglieWOW/bottigliewow-01.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-02.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-03.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-04.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-05.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-06.jpg',
+      'assets/packaging/BottiglieWOW/bottigliewow-07.jpg'
+    ]
+  },
+   
+  {
+    id: 'macchinetta-caffe',
+    categoria: 'packaging-design',
+    titolo: 'Macchina da caffè a cialde',
+    cliente: 'Kasanova',
+    colore: '#3B5BDB',
+    sommario: 'Packaging per una macchina da caffè a cialde, costruito su un linguaggio grafico pulito e moderno che lascia tutto lo spazio al prodotto.',
+    tag: ['Packaging', 'Stile pulito e moderno', 'Caffè a cialde'],
+    immagini: [
+      'assets/packaging/Macchinetta caffè/macchinetta caffe-01.png',
+      'assets/packaging/Macchinetta caffè/macchinetta caffe-02.png',
+      'assets/packaging/Macchinetta caffè/macchinetta caffe-03.png'
+    ]
+  },
+
+  {
+    id: 'decanter',
+    categoria: 'packaging-design',
+    titolo: 'Decanter',
+    cliente: 'Kasanova',
+    colore: '#8E1B3A',
+    sommario: 'Un packaging pensato per trasmettere eleganza e finezza. Tutta la confezione riprende i toni del vino rosso, per evocare il mondo del vino fin dal primo sguardo.',
+    tag: ['Packaging', 'Eleganza', 'Toni del vino rosso'],
+    immagini: [
+      'assets/packaging/Decanter/decanter-01.png',
+      'assets/packaging/Decanter/decanter-02.png',
+      'assets/packaging/Decanter/decanter-03.png'
+    ]
+  },
+
+  {
+    id: 'lampade-pianeti',
+    categoria: 'packaging-design',
+    titolo: 'Lampade Pianeti',
+    cliente: 'Kasanova',
+    colore: '#7C4DFF',
+    sommario: 'Una linea di lampade dedicata ai pianeti, con un look divertente e fumettoso. Il packaging porta lo stesso spirito: colorato, giocoso, immediato.',
+    tag: ['Packaging', 'Stile fumettoso', 'Colore'],
+    immagini: [
+      'assets/packaging/lampadeTER/lampadeter-01.png',
+      'assets/packaging/lampadeTER/lampadeter-02.png',
+      'assets/packaging/lampadeTER/lampadeter-03.png'
+    ]
+  },
+
+
+
+
+
+  {
     id: 'black-diamond',
     categoria: 'packaging-design',
     titolo: 'Black Diamond',
@@ -229,35 +263,9 @@ const PROGETTI = [
     ]
   },
 
-  {
-    id: 'rhapsody',
-    categoria: 'packaging-design',
-    titolo: 'Rhapsody',
-    cliente: 'Kasanova',
-    colore: '#B8943A',
-    sommario: 'Prodotti matt opachi e oro, molto caratteristici. Il packaging è volutamente plain, per dare il massimo risalto al colore del prodotto.',
-    tag: ['Packaging', 'Matt e oro', 'Pack plain'],
-    immagini: [
-      'assets/packaging/Rhapsody/rhapsody-01.png',
-      'assets/packaging/Rhapsody/rhapsody-02.png',
-      'assets/packaging/Rhapsody/rhapsody-03.png',
-      'assets/packaging/Rhapsody/rhapsody-04.png'
-    ]
-  },
 
-  {
-    id: 'triply-2',
-    categoria: 'packaging-design',
-    titolo: 'Tri-Ply 2.0',
-    cliente: 'Kasanova',
-    colore: '#1F5F8B',
-    sommario: 'Una linea di alta qualità in cui il packaging mostra la tecnologia nascosta dietro al prodotto e i diversi usi dei vari pezzi.',
-    tag: ['Packaging', 'Alta qualità', 'Tecnologia a vista'],
-    immagini: [
-      'assets/packaging/Tri Ply 2.0/triply2-01.png',
-      'assets/packaging/Tri Ply 2.0/triply2-02.png'
-    ]
-  },
+
+
 
   /* ---------- Altri lavori ---------- */
 
