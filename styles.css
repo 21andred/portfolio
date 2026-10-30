@@ -26,6 +26,8 @@
 
   --gutter: clamp(1.25rem, 4vw, 3.5rem);
   --max: 1180px;
+  /* I progetti usano una larghezza maggiore, per dare spazio alle foto */
+  --max-progetti: 1680px;
   --header-h: 68px;
 
   /* Margine laterale che centra il contenuto anche nelle fasce a tutta larghezza */
@@ -332,7 +334,7 @@ button { font: inherit; }
 
   background: var(--tint);
   color: var(--text);
-  padding: clamp(3rem, 7vw, 5.5rem) var(--edge);
+  padding: clamp(3rem, 7vw, 5.5rem) max(var(--gutter), calc((100% - var(--max-progetti)) / 2 + var(--gutter)));
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: clamp(2rem, 5vw, 4.5rem);
@@ -344,14 +346,17 @@ button { font: inherit; }
 /* Schermo intero: un progetto alla volta, la foto si adatta all'altezza */
 @media (min-width: 861px) and (min-height: 560px) {
   .progetto {
-    --pad-y: clamp(1.5rem, 5vh, 3.5rem);
+    --pad-y: clamp(1.25rem, 4vh, 2.75rem);
     height: calc(100svh - var(--header-h));
     padding-block: var(--pad-y);
-    grid-template-columns: 1.55fr 1fr;
+    /* a destra resta spazio per l'indicatore "03 / 13" */
+    padding-right: max(5.5rem, calc((100% - var(--max-progetti)) / 2 + var(--gutter)));
+    grid-template-columns: minmax(0, 2fr) minmax(19rem, 1fr);
+    gap: clamp(2rem, 4vw, 3.5rem);
     overflow: hidden;
   }
   .progetto-frame {
-    max-height: calc(100svh - var(--header-h) - 2 * var(--pad-y) - 1.5rem);
+    max-height: calc(100svh - var(--header-h) - 2 * var(--pad-y) - 1.25rem);
   }
 }
 
