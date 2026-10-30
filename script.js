@@ -572,8 +572,10 @@ const GOATCOUNTER_CODICE = '21andred';
 (function contatoreVisite() {
   if (!GOATCOUNTER_CODICE) return;
 
-  // Per NON contare le tue visite: apri il sito aggiungendo #io in fondo
-  // all'indirizzo (da ogni dispositivo che usi). Con #io-off si riattiva.
+  // I TUOI DISPOSITIVI: apri il sito aggiungendo #io in fondo all'indirizzo
+  // (una volta per ogni computer/telefono/browser che usi). Da lì in poi
+  // le tue visite non vengono contate e in fondo a destra vedi il totale.
+  // Con #io-off quel dispositivo torna a essere un visitatore qualsiasi.
   try {
     if (location.hash === '#io' || location.hash === '#io-off') {
       const escludi = location.hash === '#io';
@@ -581,8 +583,8 @@ const GOATCOUNTER_CODICE = '21andred';
       else localStorage.removeItem('nocount');
       history.replaceState(null, '', location.pathname + location.search);
       alert(escludi
-        ? 'Fatto: da questo dispositivo le tue visite non verranno più contate.'
-        : 'Da questo dispositivo le visite torneranno a essere contate.');
+        ? 'Fatto: da questo dispositivo le tue visite non vengono contate e in fondo alla pagina vedi il totale.'
+        : 'Questo dispositivo torna a essere un visitatore normale: le visite vengono contate e il totale non si vede più.');
     }
   } catch (e) { /* memoria del browser non disponibile: si va avanti */ }
 
@@ -600,9 +602,9 @@ const GOATCOUNTER_CODICE = '21andred';
     document.head.appendChild(tag);
   }
 
-  // 2. Mostra il totale nell'angolo, senza nessuna etichetta
+  // 2. Mostra il totale nell'angolo, senza etichetta, solo sui tuoi dispositivi
   const casella = document.getElementById('contatore');
-  if (!casella) return;
+  if (!casella || !escluso) return;
 
   fetch(`${base}/counter/TOTAL.json`)
     .then((risposta) => (risposta.ok ? risposta.json() : Promise.reject()))
