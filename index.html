@@ -4,7 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Andrea Campus — Graphic Designer</title>
-<meta name="description" content="Portfolio di Andrea Campus, graphic designer specializzato in packaging, brand identity e materiali per il retail.">
+<meta name="description" content="Portfolio di Andrea Campus, senior graphic designer: branding, packaging e comunicazione retail.">
+
+<!-- Anteprima quando il link viene condiviso (WhatsApp, LinkedIn, Facebook…) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Andrea Campus">
+<meta property="og:title" content="Andrea Campus — Senior Graphic Designer">
+<meta property="og:description" content="Branding, packaging e comunicazione retail. Dal brief allo scaffale.">
+<meta property="og:url" content="https://21andred.github.io/portfolio/">
+<meta property="og:image" content="https://21andred.github.io/portfolio/assets/anteprima-social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,22 +31,36 @@
 
 <body>
 
-<a class="skip-link" href="#progetti">Vai ai progetti</a>
+<!--
+  TESTI E TRADUZIONI
+  I testi italiani si scrivono qui, come sempre. Gli elementi con
+  data-i18n="..." hanno la loro versione inglese in testi-en.js,
+  sotto lo stesso nome: se cambi una frase qui, aggiornala anche lì.
+-->
+
+<a class="skip-link" href="#progetti" data-i18n="skip">Vai ai progetti</a>
 
 <header class="site-header">
-  <nav class="nav" aria-label="Navigazione principale">
+  <nav class="nav" aria-label="Navigazione principale" data-i18n-aria="nav.label">
     <a href="#top" class="nav-name">Andrea Campus</a>
 
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" type="button">
-      <span></span>
-      <span></span>
-    </button>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#progetti" data-nav="progetti" data-i18n="nav.progetti">Progetti</a></li>
+        <li><a href="#chi-sono" data-nav="chi-sono" data-i18n="nav.chisono">Chi sono</a></li>
+        <li><a href="#contatti" data-nav="contatti" data-i18n="nav.contatti">Contatti</a></li>
+      </ul>
 
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#progetti" data-nav="progetti">Progetti</a></li>
-      <li><a href="#chi-sono" data-nav="chi-sono">Chi sono</a></li>
-      <li><a href="#contatti" data-nav="contatti">Contatti</a></li>
-    </ul>
+      <div class="lang-switch" role="group" aria-label="Lingua / Language">
+        <button type="button" class="lang-btn is-active" data-lang="it" aria-pressed="true" lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" type="button" aria-label="Menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </nav>
 </header>
 
@@ -45,10 +74,10 @@
       <span class="line">Campus</span>
     </h1>
     <div class="hero-bottom">
-      <p class="hero-sub">Branding, packaging e comunicazione retail. Da dieci anni seguo i progetti dal brief allo scaffale, tra stampa e digitale.</p>
+      <p class="hero-sub" data-i18n="hero.sub">Branding, packaging e comunicazione retail. Da dieci anni seguo i progetti dal brief allo scaffale, tra stampa e digitale.</p>
       <div class="hero-actions">
-        <a href="#progetti" class="btn btn-primary">Vedi progetti</a>
-        <a href="assets/CV_Andrea%20Campus_26.pdf" class="btn btn-ghost" download="CV Andrea Campus.pdf">Scarica CV</a>
+        <a href="#progetti" class="btn btn-primary" data-i18n="hero.progetti">Vedi progetti</a>
+        <a href="assets/CV_Andrea%20Campus_26.pdf" class="btn btn-ghost" download="CV Andrea Campus.pdf" data-i18n="hero.cv">Scarica CV</a>
       </div>
     </div>
   </section>
@@ -57,13 +86,13 @@
   <section class="progetti" id="progetti">
     <div class="progetti-intro">
     <div class="section-head">
-      <h2>Progetti</h2>
-      <p>Scegli un progetto qui sotto, oppure scorri per vederli tutti.</p>
+      <h2 data-i18n="progetti.titolo">Progetti</h2>
+      <p data-i18n="progetti.intro">Scegli un progetto qui sotto, oppure scorri per vederli tutti.</p>
     </div>
 
-    <div class="progetti-tabs" role="tablist" aria-label="Sottocategorie progetti">
-      <button class="progetti-tab is-active" type="button" role="tab" aria-selected="true" data-categoria="packaging-design">Packaging Design</button>
-      <button class="progetti-tab" type="button" role="tab" aria-selected="false" data-categoria="altri-lavori">Altri lavori</button>
+    <div class="progetti-tabs" role="tablist" aria-label="Sottocategorie progetti" data-i18n-aria="progetti.tabs">
+      <button class="progetti-tab is-active" type="button" role="tab" aria-selected="true" data-categoria="packaging-design" data-i18n="progetti.packaging">Packaging Design</button>
+      <button class="progetti-tab" type="button" role="tab" aria-selected="false" data-categoria="altri-lavori" data-i18n="progetti.altri">Altri lavori</button>
     </div>
 
     <div id="progetti-overview" class="progetti-overview">
@@ -75,50 +104,98 @@
       <!-- Generato automaticamente da progetti-dati.js -->
     </div>
 
-    <p class="case-more">
+    <p class="case-more" data-i18n="progetti.behance">
       Altri lavori su
       <a href="https://www.behance.net/andreacamp2d4e" target="_blank" rel="noopener">Behance</a>.
     </p>
   </section>
 
+  <!-- Indicatore del progetto attuale (compare solo mentre scorri i progetti) -->
+  <nav class="progetto-nav" id="progetto-nav" aria-label="Scorri i progetti" data-i18n-aria="nav.progetti-label" hidden>
+    <button type="button" class="progetto-nav-btn" data-dir="-1" aria-label="Progetto precedente" data-i18n-aria="nav.prec">↑</button>
+    <span class="progetto-nav-count"><span id="progetto-nav-attuale">01</span><span class="progetto-nav-sep">/</span><span id="progetto-nav-totale">13</span></span>
+    <button type="button" class="progetto-nav-btn" data-dir="1" aria-label="Progetto successivo" data-i18n-aria="nav.succ">↓</button>
+  </nav>
+
   <!-- ---------- CHI SONO ---------- -->
   <section class="chi-sono" id="chi-sono">
-    <div class="about-grid">
+    <div class="about-intro">
+      <!--
+        LA TUA FOTO: salvala come assets/foto-andrea.jpg
+        (verticale, circa 1200 × 1500 px). Finché il file non c'è,
+        al suo posto compaiono le tue iniziali.
+      -->
+      <figure class="about-photo">
+        <img src="assets/foto-andrea.jpg" alt="Ritratto di Andrea Campus" data-i18n-alt="chisono.foto" loading="lazy" onerror="this.parentNode.classList.add('is-empty'); this.remove();">
+        <span class="about-photo-initials" aria-hidden="true">AC</span>
+      </figure>
+
       <div class="about-text">
-        <h2>Chi sono</h2>
+        <h2 data-i18n="chisono.titolo">Chi sono</h2>
 
-        <p>
-          Sono un graphic designer con oltre dieci anni di esperienza nel retail e nella comunicazione visiva.
-          Il mio lavoro unisce qualità visiva, chiarezza e coerenza di brand, seguendo il flusso grafico
-          dall'idea iniziale fino alla realizzazione finale — in collaborazione con team interni,
-          fornitori e processi produttivi strutturati.
+        <p class="about-lead" data-i18n="chisono.lead">
+          Ciao, sono Andrea. Disegno packaging e comunicazione per il retail da dieci anni,
+          seguendo ogni progetto dal concept fino alla stampa.
         </p>
 
-        <p>
-          Dal 2016 lavoro come graphic designer in Kasanova SPA, dove mi occupo di packaging,
-          brand identity, cataloghi prodotto, listini e materiali vendita, oltre alla progettazione
-          di materiali per i punti vendita e alla preparazione dei file esecutivi per la stampa.
+        <p data-i18n="chisono.p1">
+          In Kasanova contribuisco alle scelte creative e lavoro a stretto contatto con Marketing e Prodotto.
+          Unisco lo sviluppo visivo alla conoscenza dei processi produttivi, per garantire coerenza di brand
+          tra stampa e digitale.
         </p>
 
+        <p data-i18n="chisono.p2">
+          Vivo in Brianza e sono aperto a nuove opportunità in contesti creativi, in presenza o da remoto,
+          con disponibilità a trasferte e trasferimenti.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-col">
         <div class="about-block">
-          <h3>Esperienza</h3>
+          <h3 data-i18n="chisono.esperienza">Esperienza</h3>
 
           <div class="timeline-item">
-            <span class="timeline-year">2016 — presente</span>
-
+            <span class="timeline-year" data-i18n="chisono.kasanova.anni">2016 — oggi</span>
             <div>
-              <p class="timeline-role">Graphic Designer, Kasanova SPA</p>
-              <p class="timeline-desc">
-                Packaging, brand identity, cataloghi, listini, materiali per punti vendita,
-                prestampa e gestione colore, rendering di prodotto, contenuti digitali.
+              <p class="timeline-role">Graphic Designer, Kasanova S.p.A.</p>
+              <p class="timeline-desc" data-i18n="chisono.kasanova.desc">
+                Concept e campagne promozionali, packaging e branding per le linee di prodotto,
+                cataloghi, volantini, newsletter e materiali web, gestione del flusso dal brief alla consegna.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-year">2015 — 2016</span>
+            <div>
+              <p class="timeline-role" data-i18n="chisono.graphicamente.ruolo">Stage, Graphicamente — agenzia pubblicitaria</p>
+              <p class="timeline-desc" data-i18n="chisono.graphicamente.desc">
+                Supporto al team creativo su progetti di stampa, advertising e branding per clienti di diversi settori.
               </p>
             </div>
           </div>
         </div>
 
         <div class="about-block">
-          <h3>Formazione</h3>
-          <p class="timeline-desc">Laurea in Design della Comunicazione, Politecnico di Milano</p>
+          <h3 data-i18n="chisono.formazione">Formazione</h3>
+
+          <div class="timeline-item">
+            <span class="timeline-year">2015</span>
+            <div>
+              <p class="timeline-role" data-i18n="chisono.laurea">Laurea in Design della Comunicazione</p>
+              <p class="timeline-desc">Politecnico di Milano</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-year">2015</span>
+            <div>
+              <p class="timeline-role">Erasmus</p>
+              <p class="timeline-desc" data-i18n="chisono.erasmus">Universidade da Madeira, Funchal (Portogallo)</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -135,21 +212,32 @@
         </div>
 
         <div class="about-list">
-          <h3>Competenze</h3>
+          <h3 data-i18n="chisono.ai">AI creativa</h3>
           <ul>
-            <li>Impaginazione e prestampa</li>
-            <li>Gestione colore</li>
-            <li>Packaging e dielines</li>
-            <li>Rendering 2D/3D</li>
-            <li>Retail &amp; POS</li>
+            <li>Midjourney</li>
+            <li>Adobe Firefly</li>
+            <li>ChatGPT</li>
+            <li>Gemini</li>
+            <li>Claude</li>
           </ul>
         </div>
 
         <div class="about-list">
-          <h3>Lingue</h3>
+          <h3 data-i18n="chisono.competenze">Competenze</h3>
           <ul>
-            <li>Italiano — madrelingua</li>
-            <li>Inglese — B2/C1</li>
+            <li data-i18n="chisono.c1">Branding e packaging design</li>
+            <li data-i18n="chisono.c2">Impaginazione e prestampa</li>
+            <li data-i18n="chisono.c3">Gestione colore</li>
+            <li data-i18n="chisono.c4">Rendering 2D/3D</li>
+            <li data-i18n="chisono.c5">Retail &amp; POS</li>
+          </ul>
+        </div>
+
+        <div class="about-list">
+          <h3 data-i18n="chisono.lingue">Lingue</h3>
+          <ul>
+            <li data-i18n="chisono.italiano">Italiano — madrelingua</li>
+            <li data-i18n="chisono.inglese">Inglese — B2/C1</li>
           </ul>
         </div>
       </div>
@@ -158,7 +246,7 @@
 
   <!-- ---------- CONTATTI ---------- -->
   <section class="contatti" id="contatti">
-    <h2>Contattami</h2>
+    <h2 data-i18n="contatti.titolo">Contattami</h2>
 
     <a class="contact-email" href="mailto:andrea.campus21@gmail.com">
       andrea.campus21@gmail.com
@@ -168,19 +256,15 @@
 
     <ul class="contact-links">
       <li>
-        <a href="https://www.behance.net/andreacamp2d4e" target="_blank" rel="noopener">
-          Behance
-        </a>
+        <a href="https://www.linkedin.com/in/andrea-campus-a435b1107/" target="_blank" rel="noopener">LinkedIn</a>
       </li>
 
       <li>
-        <a href="https://www.mokazine.com/read/andreacampus21/portfolio---andrea-campus" target="_blank" rel="noopener">
-          Mokazine
-        </a>
+        <a href="https://www.behance.net/andreacamp2d4e" target="_blank" rel="noopener">Behance</a>
       </li>
 
       <li>
-        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.mokazine.com/read/andreacampus21/portfolio---andrea-campus" target="_blank" rel="noopener">Mokazine</a>
       </li>
     </ul>
   </section>
@@ -189,24 +273,25 @@
 
 <footer class="site-footer">
   <p>Andrea Campus — Graphic Designer</p>
-  <a href="#top">Torna su</a>
+  <a href="#top" data-i18n="footer.su">Torna su</a>
   <span id="contatore" class="contatore" aria-hidden="true"></span>
 </footer>
 
 <!-- ---------- VISUALIZZATORE A SCHERMO INTERO ---------- -->
 <div id="lightbox" class="lightbox" aria-hidden="true">
-  <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Chiudi il visualizzatore">×</button>
-  <button id="lightbox-prev" class="lightbox-arrow lightbox-prev" type="button" aria-label="Foto precedente">‹</button>
+  <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Chiudi il visualizzatore" data-i18n-aria="lightbox.chiudi">×</button>
+  <button id="lightbox-prev" class="lightbox-arrow lightbox-prev" type="button" aria-label="Foto precedente" data-i18n-aria="foto.prec">‹</button>
 
   <figure class="lightbox-content">
     <img id="lightbox-image" src="" alt="">
     <figcaption id="lightbox-caption"></figcaption>
   </figure>
 
-  <button id="lightbox-next" class="lightbox-arrow lightbox-next" type="button" aria-label="Foto successiva">›</button>
+  <button id="lightbox-next" class="lightbox-arrow lightbox-next" type="button" aria-label="Foto successiva" data-i18n-aria="foto.succ">›</button>
 </div>
 
 <script src="progetti-dati.js"></script>
+<script src="testi-en.js"></script>
 <script src="script.js"></script>
 
 </body>
