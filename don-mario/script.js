@@ -1,16 +1,21 @@
-/* DON MARIO — interazioni */
+/* DON MARIO — interazioni comuni a tutte le pagine */
 (function () {
   "use strict";
 
   document.documentElement.classList.add("js");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var isHome = document.body.classList.contains("is-home");
 
-  /* Header solido allo scroll */
+  /* Header: diventa pieno dopo un po' di scroll (in home, dopo l'apertura) */
   var header = document.querySelector("[data-header]");
+  var book = document.querySelector("[data-mobile-book]");
   function onScroll() {
-    header.classList.toggle("is-solid", window.scrollY > 40);
+    var limit = isHome ? window.innerHeight * 0.7 : 40;
+    header.classList.toggle("is-solid", window.scrollY > limit);
+    if (book) book.classList.toggle("is-visible", window.scrollY > window.innerHeight * 0.6);
   }
   window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
   onScroll();
 
   /* Menu mobile */
@@ -24,57 +29,49 @@
   toggle.addEventListener("click", function () {
     setMenu(toggle.getAttribute("aria-expanded") !== "true");
   });
-  nav.addEventListener("click", function (e) {
-    if (e.target.closest("a")) setMenu(false);
-  });
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") setMenu(false);
-  });
+  nav.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
 
-  /* Comparsa progressiva */
+  /* Comparsa progressiva, a cascata tra elementi fratelli */
   var reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && !reduceMotion) {
-    // piccolo ritardo a cascata tra elementi fratelli
     reveals.forEach(function (el) {
       var sibs = Array.prototype.filter.call(el.parentNode.children, function (c) {
         return c.classList.contains("reveal");
       });
       var i = sibs.indexOf(el);
-      if (i > 0) el.style.setProperty("--d", Math.min(i, 6) * 0.08 + "s");
+      if (i > 0) el.style.setProperty("--d", Math.min(i, 6) * 0.09 + "s");
     });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
-        if (en.isIntersecting) {
-          en.target.classList.add("is-in");
-          io.unobserve(en.target);
-        }
+        if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
       });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.06 });
     reveals.forEach(function (el) { io.observe(el); });
   } else {
     reveals.forEach(function (el) { el.classList.add("is-in"); });
   }
 
-  /* Scala dei punti di cottura */
+  /* Scala dei punti di cottura (pagina La cucina) */
   var done = document.querySelector("[data-doneness]");
   if (done) {
     var texts = [
       "Appena scottata su entrambi i lati: crosta sottile, interno quasi crudo e tiepido. Per chi ama il sapore più puro della carne.",
-      "Rosso e succoso al centro, ben dorato fuori. È la cottura che il nostro asador consiglia per la maggior parte dei tagli.",
+      "Rossa e succosa al centro, ben dorata fuori. È la cottura che il nostro asador consiglia per la maggior parte dei tagli.",
       "Rosa al centro, più compatta al morso. L'equilibrio ideale per tagli sottili e saporiti come l'entraña.",
-      "Cotta in modo uniforme, senza parti rosate. Su richiesta, con cotture lente che preservano la morbidezza."
+      "Cotta in modo uniforme, senza parti rosate. Su richiesta, con cotture lente che ne preservano la morbidezza."
     ];
     var tabs = done.querySelectorAll("[data-level]");
     var bar = done.querySelector("[data-doneness-bar]");
     var out = done.querySelector("[data-doneness-text]");
-    function select(n) {
+    var select = function (n) {
       tabs.forEach(function (t, i) {
         t.setAttribute("aria-selected", String(i === n));
         t.tabIndex = i === n ? 0 : -1;
       });
       bar.style.left = (12.5 + n * 25) + "%";
       out.textContent = texts[n];
-    }
+    };
     tabs.forEach(function (t, i) {
       t.addEventListener("click", function () { select(i); });
       t.addEventListener("keydown", function (e) {
@@ -90,69 +87,4 @@
   /* Anno nel footer */
   var y = document.querySelector("[data-year]");
   if (y) y.textContent = new Date().getFullYear();
-
-  /* Braci che salgono nell'hero */
-  var canvas = document.querySelector("[data-embers]");
-  if (!canvas || reduceMotion) return;
-  var ctx = canvas.getContext("2d");
-  var dpr = Math.min(window.devicePixelRatio || 1, 2);
-  var W = 0, H = 0, sparks = [], running = true;
-
-  function resize() {
-    W = canvas.clientWidth; H = canvas.clientHeight;
-    canvas.width = W * dpr; canvas.height = H * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }
-  function spawn(initial) {
-    return {
-      x: Math.random() * W,
-      y: initial ? Math.random() * H : H + 10,
-      r: Math.random() * 1.6 + 0.4,
-      vy: Math.random() * 0.55 + 0.2,
-      vx: (Math.random() - 0.5) * 0.25,
-      life: Math.random() * 0.6 + 0.4,
-      phase: Math.random() * Math.PI * 2
-    };
-  }
-  function init() {
-    resize();
-    var count = Math.round(Math.min(90, W / 16));
-    sparks = [];
-    for (var i = 0; i < count; i++) sparks.push(spawn(true));
-  }
-  function frame(t) {
-    if (!running) return;
-    ctx.clearRect(0, 0, W, H);
-    ctx.globalCompositeOperation = "lighter";
-    for (var i = 0; i < sparks.length; i++) {
-      var s = sparks[i];
-      s.y -= s.vy;
-      s.x += s.vx + Math.sin(t / 1400 + s.phase) * 0.18;
-      var h = Math.max(0, Math.min(1, s.y / H)); // 1 in basso, 0 in alto
-      var a = h * s.life * (0.6 + 0.4 * Math.sin(t / 300 + s.phase));
-      if (s.y < -10 || a <= 0.01 && s.y < H * 0.2) { sparks[i] = spawn(false); continue; }
-      var g = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 4);
-      g.addColorStop(0, "rgba(255,180,110," + a + ")");
-      g.addColorStop(0.4, "rgba(240,120,50," + a * 0.5 + ")");
-      g.addColorStop(1, "rgba(212,98,43,0)");
-      ctx.fillStyle = g;
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.r * 4, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    requestAnimationFrame(frame);
-  }
-
-  init();
-  requestAnimationFrame(frame);
-  window.addEventListener("resize", init);
-
-  // pausa quando l'hero non è visibile
-  if ("IntersectionObserver" in window) {
-    new IntersectionObserver(function (en) {
-      var vis = en[0].isIntersecting;
-      if (vis && !running) { running = true; requestAnimationFrame(frame); }
-      else if (!vis) running = false;
-    }).observe(canvas);
-  }
 })();
