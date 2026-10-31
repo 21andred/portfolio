@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Don Mario — L'arte argentina della carne · Cavenago di Brianza</title>
+<meta name="description" content="Don Mario, ristorante argentino a Cavenago di Brianza. La passione della parrilla, la maestria dell'asador, i vini di Mendoza e il piacere di stare a tavola.">
+<meta name="theme-color" content="#0e0c0a">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Don Mario">
+<meta property="og:title" content="Don Mario — L'arte argentina della carne">
+<meta property="og:description" content="La passione della parrilla. Il piacere di stare a tavola. Ristorante argentino a Cavenago di Brianza.">
+<meta property="og:locale" content="it_IT">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Don Mario",
+  "servesCuisine": ["Argentina", "Carne alla brace"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Roma 135",
+    "postalCode": "20873",
+    "addressLocality": "Cavenago di Brianza",
+    "addressRegion": "MB",
+    "addressCountry": "IT"
+  },
+  "telephone": "+39 02 9533 5007",
+  "acceptsReservations": true
+}
+</script>
+</head>
+
+<body>
+
+<!--
+  DON MARIO — sito vetrina
+  Le foto: ogni riquadro .photo accetta un'immagine reale tramite
+  style="--img: url('img/nome-file.webp')". Finché non c'è, mostra
+  una texture scura "a brace" che regge il layout.
+-->
+
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<header class="site-header" data-header>
+  <a href="#top" class="brand" aria-label="Don Mario — torna all'inizio">
+    <span class="brand__name">Don Mario</span>
+    <span class="brand__tag">Parrilla argentina</span>
+  </a>
+
+  <nav class="nav" id="nav" aria-label="Navigazione principale">
+    <a href="#cultura">Cultura</a>
+    <a href="#tagli">I tagli</a>
+    <a href="#asador">L'asador</a>
+    <a href="#cantina">Cantina</a>
+    <a href="#ospitalita">Ospitalità</a>
+    <a href="#visita" class="nav__cta">Prenota</a>
+  </nav>
+
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+    <span class="sr-only">Apri il menu</span>
+    <span></span><span></span>
+  </button>
+</header>
+
+<main id="main">
+
+  <!-- HERO ======================================================= -->
+  <section class="hero" id="top">
+    <canvas class="hero__embers" data-embers aria-hidden="true"></canvas>
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <p class="eyebrow reveal">Ristorante argentino · Cavenago di Brianza</p>
+      <h1 class="hero__title reveal">
+        L’arte argentina<br>
+        della <em>carne.</em>
+      </h1>
+      <p class="hero__lead reveal">
+        La passione della parrilla.<br>
+        Il piacere di stare a tavola.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#visita" class="btn btn--solid">Prenota un tavolo</a>
+        <a href="#tagli" class="btn btn--line">Scopri i tagli</a>
+      </div>
+    </div>
+
+    <ul class="hero__meta" aria-label="In breve">
+      <li><span>Fuoco</span>Brace viva, ogni sera</li>
+      <li><span>Materia</span>Tagli selezionati</li>
+      <li><span>Calice</span>Malbec e vini sudamericani</li>
+    </ul>
+  </section>
+
+  <!-- 01 CULTURA ================================================= -->
+  <section class="section manifesto" id="cultura">
+    <header class="section__head reveal">
+      <span class="section__num">01</span>
+      <span class="section__label">Cultura</span>
+    </header>
+
+    <p class="manifesto__text reveal">
+      Un luogo in cui la <em>cultura argentina</em> incontra la ricerca della qualità,
+      il rispetto della materia prima e il piacere dell’<em>ospitalità</em>.
+    </p>
+
+    <ol class="pillars">
+      <li class="pillar reveal">
+        <h3>Cultura</h3>
+        <p>Una tradizione gastronomica riconoscibile ovunque nel mondo: la domenica dell'asado, il fuoco al centro, la tavola lunga.</p>
+      </li>
+      <li class="pillar reveal">
+        <h3>Competenza</h3>
+        <p>Conoscere i tagli, saperli preparare, rispettarne le caratteristiche. Ogni pezzo ha la sua brace e il suo tempo.</p>
+      </li>
+      <li class="pillar reveal">
+        <h3>Ritualità</h3>
+        <p>La brace, la cottura, il taglio, il servizio al tavolo. Gesti che si ripetono uguali, ogni sera, con la stessa cura.</p>
+      </li>
+      <li class="pillar reveal">
+        <h3>Convivialità</h3>
+        <p>Il piacere di condividere una cena, un buon vino e del tempo insieme. Senza fretta.</p>
+      </li>
+      <li class="pillar reveal">
+        <h3>Ospitalità</h3>
+        <p>Il ristorante non è soltanto ciò che arriva nel piatto: è chi ti accoglie, ti consiglia e si ricorda di te.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 02 I TAGLI ================================================= -->
+  <section class="section cuts" id="tagli">
+    <div class="cuts__intro">
+      <header class="section__head reveal">
+        <span class="section__num">02</span>
+        <span class="section__label">Competenza</span>
+      </header>
+      <h2 class="display reveal">Ogni taglio<br>ha una <em>storia.</em></h2>
+      <p class="lead reveal">
+        Non esiste una bistecca: esistono tagli diversi, con grassi, fibre e
+        consistenze diverse. Conoscerli è il primo gesto di rispetto verso la materia prima.
+      </p>
+    </div>
+
+    <ul class="cut-list">
+      <li class="cut reveal">
+        <span class="cut__es">Bife de chorizo</span>
+        <span class="cut__it">Controfiletto</span>
+        <p class="cut__desc">Il classico della parrilla. Fibra compatta, bordo di grasso che in cottura si fa croccante e profuma tutto il taglio.</p>
+        <span class="cut__tip">Consigliato <b>jugoso</b></span>
+      </li>
+      <li class="cut reveal">
+        <span class="cut__es">Ojo de bife</span>
+        <span class="cut__it">Costata senz'osso</span>
+        <p class="cut__desc">Il cuore della costata, attraversato da una venatura di grasso che lo rende morbido e ricco. Per chi cerca intensità.</p>
+        <span class="cut__tip">Consigliato <b>jugoso</b></span>
+      </li>
+      <li class="cut reveal">
+        <span class="cut__es">Entraña</span>
+        <span class="cut__it">Diaframma</span>
+        <p class="cut__desc">Il taglio degli intenditori. Sottile, saporito, dalla fibra lunga: va cotto in fretta, a fuoco vivo, e tagliato contro fibra.</p>
+        <span class="cut__tip">Consigliato <b>a punto</b></span>
+      </li>
+      <li class="cut reveal">
+        <span class="cut__es">Vacío</span>
+        <span class="cut__it">Pancia</span>
+        <p class="cut__desc">Cottura lenta, lontano dalla fiamma più forte. Fuori dorato, dentro succoso: il taglio della festa argentina.</p>
+        <span class="cut__tip">Cottura <b>lenta</b></span>
+      </li>
+      <li class="cut reveal">
+        <span class="cut__es">Asado de tira</span>
+        <span class="cut__it">Costine trasversali</span>
+        <p class="cut__desc">Tagliato attraverso le costole, cotto con l'osso che protegge e insaporisce. Si mangia con calma, e con le mani.</p>
+        <span class="cut__tip">Cottura <b>lenta</b></span>
+      </li>
+      <li class="cut reveal">
+        <span class="cut__es">Lomo</span>
+        <span class="cut__it">Filetto</span>
+        <p class="cut__desc">Il taglio più tenero, dal gusto delicato. La brace gli dà carattere senza coprirne la finezza.</p>
+        <span class="cut__tip">Consigliato <b>jugoso</b></span>
+      </li>
+    </ul>
+
+    <!-- Scala di cottura interattiva -->
+    <div class="doneness reveal" data-doneness>
+      <p class="doneness__title">Il punto di cottura, alla argentina</p>
+      <div class="doneness__scale" role="tablist" aria-label="Punti di cottura">
+        <button role="tab" aria-selected="false" data-level="0">Vuelta y vuelta</button>
+        <button role="tab" aria-selected="true"  data-level="1">Jugoso</button>
+        <button role="tab" aria-selected="false" data-level="2">A punto</button>
+        <button role="tab" aria-selected="false" data-level="3">Cocido</button>
+      </div>
+      <div class="doneness__bar" aria-hidden="true"><span data-doneness-bar></span></div>
+      <p class="doneness__text" data-doneness-text aria-live="polite">
+        Rosso e succoso al centro, ben dorato fuori. È la cottura che il nostro asador consiglia per la maggior parte dei tagli.
+      </p>
+    </div>
+  </section>
+
+  <!-- 03 L'ASADOR ================================================ -->
+  <section class="section asador" id="asador">
+    <figure class="photo photo--tall asador__photo reveal" style="--img: none">
+      <figcaption>Fig. 01 — L'asador alla parrilla</figcaption>
+    </figure>
+
+    <div class="asador__body">
+      <header class="section__head reveal">
+        <span class="section__num">03</span>
+        <span class="section__label">La maestria dell'asador</span>
+      </header>
+      <h2 class="display reveal">Il fuoco<br>ha un <em>custode.</em></h2>
+      <p class="lead reveal">
+        In Argentina l'asador non è un cuoco qualsiasi: è il professionista della griglia,
+        colui che governa la brace, legge la carne e decide il momento giusto.
+        Da Don Mario, la cucina ha un volto e una competenza.
+      </p>
+
+      <blockquote class="pull reveal">
+        <p>“La carne buona non si inventa: si rispetta. Il fuoco giusto, il tempo giusto, e poi lasciarla parlare.”</p>
+        <cite>La filosofia della nostra parrilla</cite>
+      </blockquote>
+
+      <ol class="ritual">
+        <li class="reveal">
+          <span class="ritual__es">El fuego</span>
+          <h3>La brace</h3>
+          <p>Il fuoco si prepara prima di tutto. Si cuoce sulla brace, mai sulla fiamma: calore costante, profumo pulito.</p>
+        </li>
+        <li class="reveal">
+          <span class="ritual__es">La cocción</span>
+          <h3>La cottura</h3>
+          <p>Distanze, tempi, temperature. Ogni taglio trova il suo posto sulla parrilla, e l'asador lo sposta con lo sguardo prima che con le mani.</p>
+        </li>
+        <li class="reveal">
+          <span class="ritual__es">El reposo</span>
+          <h3>Il riposo</h3>
+          <p>Un passaggio che non si salta: la carne riposa perché i succhi tornino a distribuirsi. È qui che il morso diventa morbido.</p>
+        </li>
+        <li class="reveal">
+          <span class="ritual__es">El corte</span>
+          <h3>Il taglio e il servizio</h3>
+          <p>Contro fibra, allo spessore giusto, servita al tavolo. L'ultimo gesto del rito si compie davanti a te.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 04 CANTINA ================================================= -->
+  <section class="section wine" id="cantina">
+    <header class="section__head reveal">
+      <span class="section__num">04</span>
+      <span class="section__label">Il vino e la cultura gastronomica</span>
+    </header>
+
+    <div class="wine__hero">
+      <h2 class="display reveal">Non una bistecca.<br>Un’<em>esperienza</em> completa.</h2>
+      <div class="malbec reveal">
+        <span class="malbec__word">Malbec</span>
+        <p>
+          Nato in Francia, rinato ai piedi delle Ande. A Mendoza, tra vigneti
+          d'alta quota, il Malbec è diventato il vino simbolo dell'Argentina:
+          frutto scuro, tannino morbido, una naturale vocazione per la brace.
+        </p>
+      </div>
+    </div>
+
+    <div class="pairings">
+      <p class="pairings__title reveal">Abbinamenti dalla cantina</p>
+      <ul>
+        <li class="reveal"><span class="p-food">Entraña</span><span class="p-line" aria-hidden="true"></span><span class="p-wine">Malbec · Mendoza</span></li>
+        <li class="reveal"><span class="p-food">Bife de chorizo</span><span class="p-line" aria-hidden="true"></span><span class="p-wine">Cabernet Sauvignon</span></li>
+        <li class="reveal"><span class="p-food">Vacío e asado de tira</span><span class="p-line" aria-hidden="true"></span><span class="p-wine">Bonarda argentina</span></li>
+        <li class="reveal"><span class="p-food">Empanadas</span><span class="p-line" aria-hidden="true"></span><span class="p-wine">Torrontés · Salta</span></li>
+        <li class="reveal"><span class="p-food">Lomo</span><span class="p-line" aria-hidden="true"></span><span class="p-wine">Pinot Noir · Patagonia</span></li>
+      </ul>
+    </div>
+
+    <div class="table-around">
+      <figure class="photo photo--wide reveal" style="--img: none">
+        <figcaption>Fig. 02 — Empanadas, chimichurri, un calice di Malbec</figcaption>
+      </figure>
+      <div class="table-around__list">
+        <p class="pairings__title reveal">Intorno alla brace</p>
+        <dl>
+          <div class="reveal"><dt>Empanadas</dt><dd>Fagottini di pasta ripieni e cotti al forno: l'inizio di ogni cena argentina.</dd></div>
+          <div class="reveal"><dt>Provoleta</dt><dd>Formaggio provolone fuso sulla griglia, con origano e un filo d'olio.</dd></div>
+          <div class="reveal"><dt>Chimichurri</dt><dd>Prezzemolo, aglio, origano, aceto e olio. La salsa che accompagna la carne da sempre.</dd></div>
+          <div class="reveal"><dt>Salsa criolla</dt><dd>Cipolla, pomodoro e peperone a crudo: freschezza e acidità contro la ricchezza della brace.</dd></div>
+          <div class="reveal"><dt>Dulce de leche</dt><dd>Per chiudere, il dolce più amato d'Argentina.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 OSPITALITÀ ============================================== -->
+  <section class="section hospitality" id="ospitalita">
+    <header class="section__head reveal">
+      <span class="section__num">05</span>
+      <span class="section__label">L'ospitalità</span>
+    </header>
+
+    <h2 class="display display--xl reveal">
+      Il ristorante non è soltanto<br>
+      ciò che arriva <em>nel piatto.</em>
+    </h2>
+
+    <div class="hospitality__grid">
+      <div class="hosp reveal">
+        <span class="hosp__n">i.</span>
+        <h3>Accoglienza</h3>
+        <p>Dal primo saluto alla porta. Ti accogliamo come si fa in una casa argentina: con calore, e senza formalità inutili.</p>
+      </div>
+      <div class="hosp reveal">
+        <span class="hosp__n">ii.</span>
+        <h3>Servizio</h3>
+        <p>Un servizio professionale e attento, che sa raccontare un taglio, consigliare una cottura e trovare il vino giusto.</p>
+      </div>
+      <div class="hosp reveal">
+        <span class="hosp__n">iii.</span>
+        <h3>Ambiente</h3>
+        <p>Luci basse, il profumo della brace, il ritmo di una sala viva. Un luogo pensato per restare.</p>
+      </div>
+      <div class="hosp reveal">
+        <span class="hosp__n">iv.</span>
+        <h3>Convivialità</h3>
+        <p>Tagli da dividere, bottiglie da condividere, tempo da passare insieme. La tavola è il cuore di tutto.</p>
+      </div>
+    </div>
+
+    <!-- Temi ricorrenti nelle recensioni degli ospiti.
+         Per citare recensioni testuali, inserire solo frasi reali con fonte e data. -->
+    <div class="voices reveal">
+      <p class="voices__lead">Nelle recensioni, chi viene da noi non parla soltanto di carne. Parla di:</p>
+      <ul class="voices__tags">
+        <li>l'asador</li>
+        <li>i tagli</li>
+        <li>i vini argentini</li>
+        <li>le empanadas</li>
+        <li>il servizio</li>
+        <li>l'atmosfera</li>
+        <li>l'attenzione del personale</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- VISITA / PRENOTA =========================================== -->
+  <section class="visit" id="visita">
+    <div class="visit__glow" aria-hidden="true"></div>
+    <div class="visit__inner">
+      <p class="eyebrow reveal">Prenota il tuo tavolo</p>
+      <h2 class="display display--xl reveal">Ti aspettiamo<br>a <em>tavola.</em></h2>
+
+      <div class="visit__grid">
+        <div class="visit__col reveal">
+          <h3>Dove</h3>
+          <p>Via Roma 135<br>20873 Cavenago di Brianza (MB)</p>
+          <a class="link" href="https://www.google.com/maps/search/?api=1&query=Don+Mario+Via+Roma+135+Cavenago+di+Brianza" target="_blank" rel="noopener">Indicazioni stradali →</a>
+        </div>
+        <div class="visit__col reveal">
+          <h3>Prenotazioni</h3>
+          <p><a class="phone" href="tel:+390295335007">02 9533 5007</a></p>
+          <p class="muted">Consigliamo di prenotare, soprattutto nel fine settimana.</p>
+        </div>
+        <div class="visit__col reveal">
+          <h3>Orari</h3>
+          <!-- Inserire qui i giorni e gli orari di apertura ufficiali -->
+          <p class="muted">Per giorni e orari di apertura, chiamaci: saremo felici di consigliarti la serata migliore.</p>
+        </div>
+      </div>
+
+      <div class="visit__actions reveal">
+        <a href="tel:+390295335007" class="btn btn--solid">Chiama e prenota</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__brand">
+    <span class="brand__name">Don Mario</span>
+    <span class="brand__tag">L'arte argentina della carne</span>
+  </div>
+  <p>Via Roma 135 · 20873 Cavenago di Brianza (MB) · <a href="tel:+390295335007">02 9533 5007</a></p>
+  <p class="muted">© <span data-year>2026</span> Don Mario</p>
+</footer>
+
+<script src="script.js?v=1"></script>
+</body>
+</html>
