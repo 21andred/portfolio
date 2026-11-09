@@ -43,6 +43,7 @@ const TESTI_EN = {
   'progetti.collaborazione': 'In collaboration with',
   'progetti.foto': 'photos',
   'progetti.vuoto': 'Photos coming soon',
+  'progetti.visita': 'Visit the website',
 
   // Foto
   'foto.prec': 'Previous photo',

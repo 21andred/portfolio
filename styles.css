@@ -482,6 +482,19 @@ button { font: inherit; }
   border-radius: var(--radius-pill); padding: 0.38rem 0.9rem;
 }
 
+.case-link {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  margin-top: 1.5rem;
+  font-size: 0.9rem; font-weight: 700;
+  color: var(--tint);
+  background: var(--c-big);
+  padding: 0.75rem 1.35rem;
+  border-radius: var(--radius-pill);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.case-link:hover { transform: translateY(-2px); filter: brightness(1.1); }
+.progetto.is-dark .case-link { color: #14101C; }
+
 .case-more {
   max-width: var(--max); margin: 0 auto;
   padding: clamp(2.5rem, 6vw, 3.5rem) var(--gutter);

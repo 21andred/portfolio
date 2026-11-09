@@ -32,6 +32,8 @@
                        sommario, tag, cliente, contesto, collaborazione.
                        Scrivi solo i campi che cambiano: quelli che
                        mancano restano come in italiano.
+   - link            → (facoltativo) indirizzo del sito, mostra il
+                       pulsante "Visita il sito"
    - colore          → il colore del progetto, es. '#8E1B3A'.
                        Tinge la sezione e le anteprime. Scegli il
                        colore dominante del suo packaging.
@@ -335,6 +337,50 @@ const PROGETTI = [
 
 
   /* ---------- Altri lavori ---------- */
+
+  // Siti web: vanno per primi in "Altri lavori"
+
+  {
+    id: 'don-mario',
+    categoria: 'altri-lavori',
+    titolo: 'Don Mario, parrilla argentina',
+    cliente: 'Don Mario, Cavenago di Brianza',
+    colore: '#C2562B',
+    link: 'https://21andred.github.io/don-mario/',
+    sommario: 'Sito web per un ristorante argentino: un\'atmosfera scura e calda, tra brace e scintille, che racconta i tagli di carne, la cucina e la serata al ristorante. In tre lingue, con la carta completa e la prenotazione online.',
+    tag: ['Sito web', 'Italiano, inglese, spagnolo', 'Prenotazione online'],
+    en: {
+      titolo: 'Don Mario, Argentine grill',
+      sommario: 'Website for an Argentine restaurant: a dark, warm mood of embers and sparks that tells the story of the cuts, the kitchen and an evening at the restaurant. In three languages, with the full menu and online booking.',
+      tag: ['Website', 'Italian, English, Spanish', 'Online booking']
+    },
+    immagini: [
+      'assets/siti/donmario/donmario-01.webp',
+      'assets/siti/donmario/donmario-02.webp',
+      'assets/siti/donmario/donmario-03.webp',
+      'assets/siti/donmario/donmario-04.webp'
+    ]
+  },
+
+  {
+    id: 'pan-e-bun',
+    categoria: 'altri-lavori',
+    titolo: 'Pan & Bun Arcore',
+    cliente: 'Pan & Bun, Arcore',
+    colore: '#C99A3B',
+    scuro: true,
+    sommario: 'Sito web per uno smash burger con salumeria d\'autore: nero e oro, titoli condensati e foto in primo piano. Menù da sfogliare, orari sempre aggiornati e prenotazione del tavolo in pochi tocchi.',
+    tag: ['Sito web', 'Nero e oro', 'Prenotazione tavolo'],
+    en: {
+      sommario: 'Website for a smash burger joint with fine cured meats: black and gold, condensed headlines and close-up photography. A browsable menu, always up-to-date opening hours and table booking in a few taps.',
+      tag: ['Website', 'Black and gold', 'Table booking']
+    },
+    immagini: [
+      'assets/siti/panebun/panebun-01.webp',
+      'assets/siti/panebun/panebun-02.webp',
+      'assets/siti/panebun/panebun-03.webp'
+    ]
+  },
 
   {
     id: 'homs',

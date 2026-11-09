@@ -14,7 +14,8 @@ const TESTI_IT = {
   'foto.apri': 'Apri a schermo intero',
   'foto.vai': 'Vai alla foto',
   'foto.foto': 'foto',
-  'foto.mancante': 'Immagine non trovata'
+  'foto.mancante': 'Immagine non trovata',
+  'progetti.visita': 'Visita il sito'
 };
 
 const LINGUE = ['it', 'en'];
@@ -238,6 +239,7 @@ function creaProgetto(progetto, indice) {
         <p class="case-summary">${campo(progetto, 'sommario')}</p>
         ${creaMeta(progetto)}
         <ul class="case-tags">${tag}</ul>
+        ${progetto.link ? `<a class="case-link" href="${progetto.link}" target="_blank" rel="noopener">${t('progetti.visita')} <span aria-hidden="true">↗</span></a>` : ''}
       </div>
     </article>
   `;
